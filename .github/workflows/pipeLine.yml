@@ -41,6 +41,6 @@ jobs:
       - name: Send Message
         uses: appleboy/discord-action@master
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          webhook_id: ${{ secrets.ID_CHANNEL }}
+          webhook_token: ${{ secrets.TOKEN }}
           args: The ${{ github.event_name }} event triggered first step.
