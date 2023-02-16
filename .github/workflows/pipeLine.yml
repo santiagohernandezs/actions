@@ -39,7 +39,8 @@ jobs:
 
     steps:
       - name: Send Message
-        uses: cl8dep/action-discord@v0.1
+        uses: appleboy/discord-action@master
         with:
-          webhook: ${{ secrets.DISCORD }}
-          message: 'Hello World'
+          webhook_id: ${{ secrets.WEBHOOK_ID }}
+          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          args: The ${{ github.event_name }} event triggered first step.
