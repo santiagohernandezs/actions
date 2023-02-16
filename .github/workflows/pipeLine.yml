@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Send Message
-        uses: cl8dep/action-discord@v0
+        uses: cl8dep/action-discord@v0.1
         with:
           webhook: ${{ secrets.DISCORD }}
           message: 'Hello World'
