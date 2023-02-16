@@ -33,15 +33,3 @@ jobs:
         with:
           eslint: true
           prettier: true
-  send-message:
-    name: Discord Message
-    runs-on: ubuntu-20.04
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Send Message
-        uses: michael2macdonald/discord-message-updater
-        with:
-          discord_token: ${{ secrets.TOKEN }}
-          discord_channel: '1075828523702439949' # N.B. The quote marks here are required
-          discord_message: new #
