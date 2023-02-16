@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Send Message
-        uses: michael2macdonald/discord-message-updater
+        uses: michael2macdonald/discord-message-updater@v1.1.1
         with:
           discord_token: ${{ secrets.TOKEN }}
           discord_channel: '1075828523702439949' # The quote marks here are required
