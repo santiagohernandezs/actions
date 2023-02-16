@@ -12,5 +12,8 @@
         "sourceType": "module"
     },
     "rules": {
+        "linebreak-style": "off",
+        "semi" : "off",
+        "no-console": "off",
     }
 }
