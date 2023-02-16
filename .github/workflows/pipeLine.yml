@@ -33,7 +33,12 @@ jobs:
         with:
           eslint: true
           prettier: true
-      - name: Discord notification
+  send-message:
+    name: Discord Message
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Send Message
         uses: cl8dep/action-discord@v0
         with:
           webhook: ${{ secrets.DISCORD }}
