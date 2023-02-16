@@ -1,0 +1,24 @@
+name: pipeLine
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: install dependencies
+        run: npm install --no-audit --no-fund --no-optional
+      - name: lint
+        run: npm run eslint
+      - name: build
+        run: npm run build
+        # Mensaje de Discord
