@@ -18,7 +18,7 @@ jobs:
       - name: install dependencies
         run: npm install --no-audit --no-fund --no-optional
       - name: lint
-        run: npm run eslint
+        run: npm run lint
       - name: build
         run: npm run build
         # Mensaje de Discord
