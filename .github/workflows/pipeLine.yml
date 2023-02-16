@@ -43,5 +43,4 @@ jobs:
         with:
           webhook_id: ${{ secrets.ID_CHANNEL }}
           webhook_token: ${{ secrets.TOKEN }}
-          args: The ${{ github.event_name }} event triggered first step.
           message: Hola mundo.
