@@ -33,3 +33,8 @@ jobs:
         with:
           eslint: true
           prettier: true
+      - name: Discord notification
+        uses: cl8dep/action-discord@v0
+        with:
+          webhook: ${{ secrets.DISCORD }}
+          message: 'Hello World'
