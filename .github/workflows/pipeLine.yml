@@ -39,8 +39,8 @@ jobs:
 
     steps:
       - name: Send Message
-        uses: michael2macdonald/discord-message-updater@v1.1.1
+        uses: hreeder/discord-post-updater
         with:
           discord_token: ${{ secrets.TOKEN }}
-          discord_channel: '1075828523702439949' # The quote marks here are required
-          discord_message: hello world # Optional, use quotes if specifying an ID
+          discord_channel: '1075828523702439949' # N.B. The quote marks here are required
+          discord_message: new #
