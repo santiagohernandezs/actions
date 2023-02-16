@@ -39,8 +39,8 @@ jobs:
 
     steps:
       - name: Send Message
-        uses: appleboy/discord-action@master
+        uses: michael2macdonald/discord-message-updater
         with:
-          webhook_id: ${{ secrets.ID_CHANNEL }}
-          webhook_token: ${{ secrets.TOKEN }}
-          message: Hola mundo.
+          discord_token: ${{ secrets.TOKEN }}
+          discord_channel: '1075828523702439949' # The quote marks here are required
+          discord_message: hello world # Optional, use quotes if specifying an ID
