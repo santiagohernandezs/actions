@@ -15,11 +15,12 @@ jobs:
     name: Discord Message
     runs-on: ubuntu-20.04
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Send Message
-        uses: michael2macdonald/discord-message-updater
-        with:
-          discord_token: ${{ secrets.TOKEN }}
-          discord_channel: '1075828523702439949' # N.B. The quote marks here are required
-          discord_message: new asdasdmasdm;adnmasmd #
+    steps:      
+      - name: Notify discord
+        uses: th0th/notify-discord@v0.4.1
+        if: ${{ always() }}
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_JOB_NAME: "Build and deploy"
+          GITHUB_JOB_STATUS: ${{ job.status }}
