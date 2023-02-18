@@ -15,7 +15,7 @@ jobs:
       runs-on: ubuntu-20.04
       steps:
       - run: |
-          echo The PR was merged
+          echo The PR was merged resolving the issue with ${{ env.REWARD }}
 
   send-message:
     name: Discord Message
@@ -31,3 +31,5 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_JOB_NAME: "Build and deploy"
           GITHUB_JOB_STATUS: ${{ job.status }}
+          REWARD: ${{github.event.issue.title}}
+          
