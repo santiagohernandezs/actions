@@ -1,21 +1,28 @@
 name: discord message
 
 on:
-  # Trigger the workflow on push or pull request,
+  # Trigger the workflow on pull request,
   # but only for the main branch
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
+    types:
+      - closed
 
 jobs:
+  if_merged:
+      if: github.event.pull_request.merged == true
+      runs-on: ubuntu-20.04
+      steps:
+      - run: |
+          echo The PR was merged
+
   send-message:
     name: Discord Message
     runs-on: ubuntu-20.04
 
-    steps:      
+    steps:
+    
       - name: Notify discord
         uses: th0th/notify-discord@v0.4.1
         if: ${{ always() }}
