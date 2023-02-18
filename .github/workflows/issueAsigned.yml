@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: "echo the action"
-        run: echo '${{ github.actor }}' se ha '${{ github.event }}'
+        run: echo '${{ github.actor }}' se ha '${{ github.event_name }}'
   
