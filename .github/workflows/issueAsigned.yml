@@ -11,6 +11,5 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: "echo the action"
-        run: echo $ {{ github.actor }} se ha asignado el issue $ {{ github.action }}
-
+        run: echo '${{ github.actor }}' se ha asignado el issue '${{ github.action }}'
   
